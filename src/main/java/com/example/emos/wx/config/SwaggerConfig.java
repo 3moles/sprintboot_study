@@ -30,7 +30,6 @@ public class SwaggerConfig {
         ApiInfo info = builder.build();
         docket.apiInfo(info);
 
-        //测试一下
         ApiSelectorBuilder selectorBuilder = docket.select();
         selectorBuilder.paths(PathSelectors.any());
         selectorBuilder.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class));
